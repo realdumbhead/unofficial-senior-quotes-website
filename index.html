@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Google analytics -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+	<script src="jquery.twbsPagination.js"></script>
+  </head>
+  <body>
+
+		<div class="jumbotron text-center" style="margin-bottom:0; background-color:rgb(203, 245, 161)">
+				<h1>Unofficial Senior Quotes and Superlatives</h1>
+		</div>
+
+		<ul class="nav nav-tabs bg-dark">
+				<li class="nav-item">
+					<a class="nav-link text-white active" data-toggle="tab" href="#home">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" data-toggle="tab" href="#submit-quote">Submit Quote</a>
+				</li>
+				<li class="nav-item">
+						<a class="nav-link text-white" data-toggle="tab" href="#view-quote">View Quotes</a>
+					</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" data-toggle="tab" href="#submit-superlatives">Submit Superlative</a>
+				</li>
+				<li class="nav-item">
+						<a class="nav-link text-white" data-toggle="tab" href="#nominate-superlatives" onclick="loadSuperlatives()">Vote for Superlatives</a>
+					</li>
+			</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane container active" id="home">
+				<br>
+				<h3>What is the purpose of unofficial senior quotes and superlatives?</h3>
+				<p>The school restricts what you can say on senior quotes and chooses the superlatives question, 
+					so I created a unofficial one where you can say anything you want on your quote and come up with 
+					any question for the superlative. That's right, you can say whatever you want and come up with 
+					your own superlatives.</p>
+				<h3>Will the school know about it?</h3>
+				<p>This is "unofficial" so I plan to keep it lowkey. This is has no relation with the school administration.</p>
+				<h3>How does unofficial senior quotes work?</h3>
+				<p>You enter a quote and your name in a form. I will take everybody's quote and create a document. 
+					After everyone enters his/her quote, I will print out the document and hand it out to everyone 
+					and release it online.</p>
+				<h3>How does the superlatives work?</h3>	
+				<p>You submit your superlatives and then vote on your favorite superlatives. The top 15—maybe more 
+					if this becomes popular—superlatives will be chosen. After the voting process ends, you will be able to 
+					nominate people for the superlative.
+				</p>
+			</div>
+			<div class="tab-pane container fade" id="submit-quote" align="center">
+				<br>
+				<h3>Fill out your quote!</h3>
+				<iframe class="quote-iframe" src="">google form</iframe>
+			</div>
+			<div class="tab-pane container fade" id="view-quote" align="center">
+				<br>
+				<h3>Responses:</h3>
+				<h4><a href = "Unofficial Senior Quotes.pdf">Download Quotes! Click here.</a></h4>
+				<iframe class="quote-iframe" src="">google form spreadsheet</iframe>
+			</div>
+			<div class="tab-pane container fade" id="submit-superlatives" onsubmit="return submitSuperlative()"  align="center">
+					<br>
+					<h3>Enter your superlative!</h3>
+					<form action="submitSuperlative.php" method="POST" id="submit-superlatives-form">
+						<textarea name="superlative" class="submit-superlative-textarea" id="submit-superlatives-message"></textarea>
+						<br>
+						<button type="submit" id="submit-superlatives-button">Submit</button>
+					</form>
+			</div>
+			<div class="tab-pane container fade" id="nominate-superlatives">
+				<br>
+				<p>The page is still loading...</p>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class = "container text-center">
+				<br>
+				<hr>
+				<div class="instagram">
+						<a href="" class="fa fa-instagram"></a>
+				</div>
+				<div>Email: <a href="">email@email.com</a></div>
+				<br>
+			</div>	
+		</footer>
+	</body>
+</html>
